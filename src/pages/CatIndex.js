@@ -1,11 +1,13 @@
 import React from 'react'
 import heroLogo from '../assets/heroLogo.png'
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink} from 'reactstrap'
+import { Card, CardBody, CardTitle, CardSubtitle, CardText} from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 const CatIndex = ({ cats }) => {
-  console.log(cats);
+  ;
   return (
     <>
+    
       <div>
         <div>
           <p className="flex justify-center text-5xl font-display "></p>
@@ -14,9 +16,9 @@ const CatIndex = ({ cats }) => {
           </div>
         </div>
       </div>
-      <h1>Cat Index Page</h1>
+      <h1>Cat Index</h1>
       <main>
-        {cats.map(({ cat, index, name, image, enjoys, age }) => {
+        {cats?.map(({ cat, index, name, image, enjoys, age, id }) => {
           return (
             <>
               <Card
@@ -39,8 +41,7 @@ const CatIndex = ({ cats }) => {
                   <CardText>
                     { enjoys }
                   </CardText>
-                  <CardLink href="#">Card Link</CardLink>
-                  <CardLink href="#">Another Link</CardLink>
+                  <NavLink to={`/catshow/${id}`}>Check Meowt</NavLink>
                 </CardBody>
               </Card>
             </>

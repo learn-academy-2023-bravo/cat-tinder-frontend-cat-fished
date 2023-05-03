@@ -1,9 +1,54 @@
 import React from 'react'
+import heroLogo from '../assets/heroLogo.png'
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, CardLink} from 'reactstrap'
 
-const CatIndex = () => {
+const CatIndex = ({ cats }) => {
+  console.log(cats);
   return (
-    <div>CatIndex</div>
-  )
-}
+    <>
+      <div>
+        <div>
+          <p className="flex justify-center text-5xl font-display "></p>
+          <div className="flex justify-center  ">
+            <img src={heroLogo} alt="company logo" />
+          </div>
+        </div>
+      </div>
+      <h1>Cat Index Page</h1>
+      <main>
+        {cats.map(({ cat, index, name, image, enjoys, age }) => {
+          return (
+            <>
+              <Card
+                style={{
+                  width: "18rem",
+                }}
+              >
+                <CardBody>
+                  <CardTitle tag="h5">{ name }</CardTitle>
+                  <CardSubtitle className="mb-2 text-muted" tag="h6">
+                    { age }
+                  </CardSubtitle>
+                </CardBody>
+                <img
+                  alt="Card cap"
+                  src={ image }
+                  width="100%"
+                />
+                <CardBody>
+                  <CardText>
+                    { enjoys }
+                  </CardText>
+                  <CardLink href="#">Card Link</CardLink>
+                  <CardLink href="#">Another Link</CardLink>
+                </CardBody>
+              </Card>
+            </>
+          );
+        })}
+      </main>
+    </>
+  );
+};
 
 export default CatIndex

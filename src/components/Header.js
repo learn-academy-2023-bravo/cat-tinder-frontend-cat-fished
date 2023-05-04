@@ -7,8 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
+import { NavLink } from "react-router-dom"
 
 
 const Header = () => {

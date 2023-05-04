@@ -7,8 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
+import { NavLink } from "react-router-dom"
 
 
 const Header = () => {
@@ -27,11 +27,11 @@ const Header = () => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink className="self-end" href="/catnew">Create an account</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
+              <NavLink className="self-end" href="/catedit">
+                Edit Account  
               </NavLink>
             </NavItem>
           </Nav>

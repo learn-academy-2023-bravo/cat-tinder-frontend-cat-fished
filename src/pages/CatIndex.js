@@ -15,6 +15,7 @@ import { NavLink } from "react-router-dom";
 const CatIndex = ({ cats, id }) => {
   return (
     <>
+    <h1>Cat Index</h1>
       <div>
         <div>
           <div>
@@ -81,31 +82,7 @@ const CatIndex = ({ cats, id }) => {
         </main>
       </div>
       <div>
-        {/* <>
-              <Card 
-                style={{
-                  width: "18rem",
-                }}
-              >
-                <CardBody >
-                  <CardTitle tag="h5">{ name }</CardTitle>
-                  <CardSubtitle className="mb-2 text-muted" tag="h6">
-                    { age }
-                  </CardSubtitle>
-                </CardBody>
-                <img
-                  alt="Card cap"
-                  src={ image }
-                  width="100%"
-                />
-                <CardBody>
-                  <CardText>
-                    { enjoys }
-                  </CardText>
-                  <NavLink to={`/catshow/${id}`}>Check Meowt</NavLink>
-                </CardBody>
-              </Card>
-            </> */}
+       
       </div>
     </>
   );

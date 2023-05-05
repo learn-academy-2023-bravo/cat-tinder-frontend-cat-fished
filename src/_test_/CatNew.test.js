@@ -5,9 +5,11 @@ import { BrowserRouter } from "react-router-dom";
 describe("<CatNew />", () => {
   it("renders the new cat form", () => {
     render(
+      
       <BrowserRouter>
         <CatNew />
       </BrowserRouter>
+      
     );
 
     expect(screen.getByText(/what is your name\?/i)).toBeInTheDocument();
@@ -17,6 +19,6 @@ describe("<CatNew />", () => {
     expect(
       screen.getByPlaceholderText(/enter your age here/i)
     ).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /submit/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /click me/i })).toBeInTheDocument();
   });
 });

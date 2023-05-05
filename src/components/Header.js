@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -7,12 +7,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-} from 'reactstrap';
-import { NavLink } from "react-router-dom"
-
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
-
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
@@ -27,11 +25,13 @@ const Header = () => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink className="self-end" href="/catnew">Create an account</NavLink>
+              <NavLink className="self-end" to="/catnew">
+                Create an account
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="self-end" href="/catedit">
-                Edit Account  
+              <NavLink className="self-end" to="/catedit">
+                Edit Account
               </NavLink>
             </NavItem>
           </Nav>
@@ -39,6 +39,6 @@ const Header = () => {
       </Navbar>
     </div>
   );
-}
+};
 
 export default Header;

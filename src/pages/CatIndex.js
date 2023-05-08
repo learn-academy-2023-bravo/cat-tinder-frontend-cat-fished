@@ -1,25 +1,14 @@
 import React from "react";
 import heroLogo from "../assets/heroLogo.png";
-
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
-} from "reactstrap";
-
 import { NavLink } from "react-router-dom";
 
 const CatIndex = ({ cats, id }) => {
   return (
     <>
-    <h1>Cat Index</h1>
+    
       <div>
         <div>
           <div>
-            <p className=" "></p>
             <div className="flex justify-center  ">
               <img src={heroLogo} alt="company logo" />
             </div>
@@ -41,16 +30,16 @@ const CatIndex = ({ cats, id }) => {
               >
                 <figure className="h-48">
                   <img
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition group-hover:scale-125"
                     src={image}
                     alt={name}
                   />
                 </figure>
                 <div className="p-4">
                   <h3 className="text-xl font-bold">
-                    {name} Age:{age}
+                    {name}<br/><br/> Age:{age} <br/>
                   </h3>
-                  <p className="font-serif">{enjoys}</p>
+                  
                 </div>
                 <footer className="flex gap-2 px-4 pb-4 justify-between">
                   <button className="text-blue-400 hover:text-red-400">
@@ -73,7 +62,7 @@ const CatIndex = ({ cats, id }) => {
                       fontSize: "16px",
                     }}
                   >
-                    <button>Catch Me</button>
+                    <button>View Profile</button>
                   </NavLink>
                 </footer>
               </div>

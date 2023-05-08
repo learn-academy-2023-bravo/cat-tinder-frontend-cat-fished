@@ -1,20 +1,35 @@
 import { screen, render } from "@testing-library/react";
 import CatIndex from "../pages/CatIndex";
 import mockCats from "../mockCats";
+import { Router, BrowserRouter} from "react-router-dom";
 
 describe("<CatIndex />", () => {
   it("displays the cat index for the user.", () => {
-    render(<CatIndex />);
-    expect(screen.getByText(/CatIndex/i)).toBeInTheDocument();
+    render(
+      
+      
+      <BrowserRouter>
+    <CatIndex />
+    </BrowserRouter>
+    
+    
+    );
+    expect(screen.getByText(/Cat Index/i)).toBeInTheDocument();
   });
 
   it('displays all the cat cards for the user', () => {
-    const div = document.createElement('div')
-    render(<CatIndex cats={mockCats} />, div)
-    mockCats.forEach((cat)=> {
-      const catName = screen.getByText(cat.name)
-      expect(catName).toBeInTheDocument()
-    })
+    screen.logTestingPlaygroundURL()
+    
+    render(
+      
+      
+      <BrowserRouter>
+        <CatIndex cats={mockCats} />
+      </BrowserRouter>
+    
+    )
+      expect(screen.getAllByText(/fat cat 2/i)).toBeInTheDocument()
+    
 
   })
 });

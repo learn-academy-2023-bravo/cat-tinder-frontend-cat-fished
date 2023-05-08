@@ -14,7 +14,7 @@ const CatIndex = ({ cats, id }) => {
             </div>
           </div>
         </div>
-        <h1 className="font-display flex justify-center border-1 border-white">
+        <h1 className="text-gray-500 font-display flex justify-center border-1 border-white">
           A dating website.
         </h1>
         <main className="flex justify-center gap-8 py-8 flex-wrap">

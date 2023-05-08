@@ -6,9 +6,13 @@ const CatShow = ({ cats, deleteCat }) => {
   const { id } = useParams();
   const selectedCat = cats.find((cat) => cat.id === +id);
   console.log("id: ", id);
+
+  //==================================================================================
+  //very cool
   if (!selectedCat) {
     return <div>Loading...</div>;
   }
+  //===================================================================================
 
   return (
     <>
